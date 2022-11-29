@@ -1,0 +1,7 @@
+site_name: Pigeon Soup
+theme:
+  name: material
+  palette:
+    primary: red
+    scheme: default
+    accent: red
