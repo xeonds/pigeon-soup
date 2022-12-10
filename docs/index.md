@@ -2,10 +2,15 @@
 
 速通期末，不挂就行（不是
 
+凭着我一个人的理解，肯定不能帮大家突击所有学科。那我就先做好C语言的部分吧，其他部分留待他人日后完善。
+
 ## 编写指南
 
-* 会git？直接clone[仓库](http://www.jiujiuer.xyz:3000/xeonds/pigeon-soup.git)并pr即可。
-* 不会git？那就发群里，我挂上去。
+用`markdown`语法（或者不会的话写到 Word 里也行）写/复制粘贴，按照一定的内容划分快速介绍基础知识。
+
+写完可以发我邮箱：`xeonds@stu.xidian.edu.cn` ，俺整理上来(\*/ω＼\*)
+
+或者会Git的也可以直接pr到我[仓库](http://github.com/xeonds/pigeon-soup.git)
 
 ## LICENSE
 
