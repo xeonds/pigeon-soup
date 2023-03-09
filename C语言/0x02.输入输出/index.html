@@ -1,0 +1,905 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../0x01.%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
+      
+      
+        <link rel="next" href="../0x03.%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
+    
+    
+      
+        <title>输入输出 - Pigeon Soup</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.402914a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Pigeon Soup" class="md-header__button md-logo" aria-label="Pigeon Soup" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pigeon Soup
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              输入输出
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Pigeon Soup" class="md-nav__button md-logo" aria-label="Pigeon Soup" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Pigeon Soup
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        鸽子小灶
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          C语言
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          C语言
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x01.%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" class="md-nav__link">
+        基础语法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          输入输出
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        输入输出
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#printf" class="md-nav__link">
+    printf()
+  </a>
+  
+    <nav class="md-nav" aria-label="printf()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    占位符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    输出格式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scanf" class="md-nav__link">
+    scanf()
+  </a>
+  
+    <nav class="md-nav" aria-label="scanf()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    用法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gets" class="md-nav__link">
+    gets()
+  </a>
+  
+    <nav class="md-nav" aria-label="gets()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    用法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    其他
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getchar" class="md-nav__link">
+    getchar()
+  </a>
+  
+    <nav class="md-nav" aria-label="getchar()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    用法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#puts" class="md-nav__link">
+    puts()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    用法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putchar" class="md-nav__link">
+    putchar()
+  </a>
+  
+    <nav class="md-nav" aria-label="putchar()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    用法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x03.%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="md-nav__link">
+        字符串
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          数据结构
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          数据结构
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/0x01.%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+        0x01.基础概念
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/0x02.%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/" class="md-nav__link">
+        线性结构
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/0x03.%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/" class="md-nav__link">
+        0x03.非线性结构
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/0x04.BFS/" class="md-nav__link">
+        0x04.BFS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#printf" class="md-nav__link">
+    printf()
+  </a>
+  
+    <nav class="md-nav" aria-label="printf()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    占位符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    输出格式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scanf" class="md-nav__link">
+    scanf()
+  </a>
+  
+    <nav class="md-nav" aria-label="scanf()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    用法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gets" class="md-nav__link">
+    gets()
+  </a>
+  
+    <nav class="md-nav" aria-label="gets()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    用法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    其他
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getchar" class="md-nav__link">
+    getchar()
+  </a>
+  
+    <nav class="md-nav" aria-label="getchar()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    用法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#puts" class="md-nav__link">
+    puts()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    用法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putchar" class="md-nav__link">
+    putchar()
+  </a>
+  
+    <nav class="md-nav" aria-label="putchar()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    用法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">输入输出</h1>
+<p><code>printf()</code>和<code>scanf()</code>是在标准库的头文件<code>stdio.h</code>定义的。使用这两个函数之前，必须在源码文件头部引入这个头文件。这俩是功能很强的标准IO函数，掌握这俩，其他的函数就是偶尔图个方便。</p>
+<h2 id="printf"><code>printf()</code></h2>
+<p><code>printf()</code>的作用是将参数文本输出到屏幕。它名字里面的<code>f</code>代表<code>format</code>（格式化），表示可以定制输出文本的格式。</p>
+<pre><code class="language-c">printf(&quot;Hello World\n&quot;);
+</code></pre>
+<p><code>printf()</code>不会在行尾自动添加换行符，运行结束后，光标就停留在输出结束的地方，不会自动换行。为了让光标移到下一行的开头，可以在输出文本的结尾，添加一个换行符<code>\n</code>。这里的<code>\n</code>称为<code>转义符</code>，目前只需要知道这一个。</p>
+<h3 id="_2">占位符</h3>
+<p><code>printf()</code>可以在输出文本中指定占位符。所谓“占位符”，就是这个位置可以用其他值代入。</p>
+<pre><code class="language-c">// 输出 There are 3 apples  
+printf(&quot;There are %i apples\n&quot;, 3);  
+</code></pre>
+<p>上面示例中，<code>There are %i apples\n</code>是输出文本，里面的<code>%i</code>就是占位符，表示这个位置要用其他值来替换。占位符的第一个字符一律为百分号<code>%</code>，第二个字符表示占位符的类型，<code>%i</code>表示这里代入的值必须是一个整数。<code>%i</code>基本等同于<code>%s</code>。</p>
+<p><code>printf()</code>的第二个参数就是替换占位符的值，上面的例子是整数<code>3</code>替换<code>%i</code>。执行后的输出结果就是<code>There are 3 apples</code>。</p>
+<p>常用的占位符除了<code>%i</code>，还有<code>%s</code>表示代入的是字符串。</p>
+<pre><code class="language-c">printf(&quot;%s will come tonight\n&quot;, &quot;Jane&quot;);  
+</code></pre>
+<p>上面示例中，<code>%s</code>表示代入的是一个字符串，所以<code>printf()</code>的第二个参数就必须是字符串，这个例子是<code>Jane</code>。执行后的输出就是<code>Jane will come tonight</code>。</p>
+<p>输出文本里面可以使用多个占位符。</p>
+<pre><code class="language-c">printf(&quot;%s says it is %i o'clock\n&quot;, &quot;Ben&quot;, 21);  
+</code></pre>
+<p>上面示例中，输出文本<code>%s says it is %i o'clock</code>有两个占位符，第一个是字符串占位符<code>%s</code>，第二个是整数占位符<code>%i</code>，分别对应<code>printf()</code>的第二个参数（<code>Ben</code>）和第三个参数（<code>21</code>）。执行后的输出就是<code>Ben says it is 21 o'clock</code>。</p>
+<p><code>printf()</code>参数与占位符是一一对应关系，如果有<code>n</code>个占位符，<code>printf()</code>的参数就应该有<code>n + 1</code>个。如果参数个数少于对应的占位符，<code>printf()</code>可能会输出内存中的任意值。</p>
+<p><code>printf()</code>的占位符有许多种类，与 C 语言的数据类型相对应。下面按照字母顺序，列出常用的占位符，方便查找，具体含义在后面章节介绍。</p>
+<ul>
+<li><code>%a</code>：浮点数。</li>
+<li><code>%A</code>：浮点数。</li>
+<li><code>%c</code>：字符。</li>
+<li><code>%d</code>：十进制整数。</li>
+<li><code>%e</code>：使用科学计数法的浮点数，指数部分的<code>e</code>为小写。</li>
+<li><code>%E</code>：使用科学计数法的浮点数，指数部分的<code>E</code>为大写。</li>
+<li><code>%i</code>：整数，基本等同于<code>%d</code>。</li>
+<li><code>%f</code>：小数（包含<code>float</code>类型和<code>double</code>类型）。</li>
+<li><code>%g</code>：6个有效数字的浮点数。整数部分一旦超过6位，就会自动转为科学计数法，指数部分的<code>e</code>为小写。</li>
+<li><code>%G</code>：等同于<code>%g</code>，唯一的区别是指数部分的<code>E</code>为大写。</li>
+<li><code>%hd</code>：十进制 short int 类型。</li>
+<li><code>%ho</code>：八进制 short int 类型。</li>
+<li><code>%hx</code>：十六进制 short int 类型。</li>
+<li><code>%hu</code>：unsigned short int 类型。</li>
+<li><code>%ld</code>：十进制 long int 类型。</li>
+<li><code>%lo</code>：八进制 long int 类型。</li>
+<li><code>%lx</code>：十六进制 long int 类型。</li>
+<li><code>%lu</code>：unsigned long int 类型。</li>
+<li><code>%lld</code>：十进制 long long int 类型。</li>
+<li><code>%llo</code>：八进制 long long int 类型。</li>
+<li><code>%llx</code>：十六进制 long long int 类型。</li>
+<li><code>%llu</code>：unsigned long long int 类型。</li>
+<li><code>%Le</code>：科学计数法表示的 long double 类型浮点数。</li>
+<li><code>%Lf</code>：long double 类型浮点数。</li>
+<li><code>%n</code>：已输出的字符串数量。该占位符本身不输出，只将值存储在指定变量之中。</li>
+<li><code>%o</code>：八进制整数。</li>
+<li><code>%p</code>：指针。</li>
+<li><code>%s</code>：字符串。</li>
+<li><code>%u</code>：无符号整数（unsigned int）。</li>
+<li><code>%x</code>：十六进制整数。</li>
+<li><code>%zd</code>：<code>size_t</code>类型。</li>
+<li><code>%%</code>：输出一个百分号。</li>
+</ul>
+<h3 id="_3">输出格式</h3>
+<p><code>printf()</code>可以定制占位符的输出格式。</p>
+<ol>
+<li>限定宽度</li>
+</ol>
+<p><code>printf()</code>允许限定占位符的最小宽度。</p>
+<pre><code class="language-c">printf(&quot;%5d\n&quot;, 123); // 输出为 &quot;  123&quot;  
+</code></pre>
+<p>上面示例中，<code>%5d</code>表示这个占位符的宽度至少为5位。如果不满5位，对应的值的前面会添加空格。</p>
+<p>输出的值默认是右对齐，即输出内容前面会有空格；如果希望改成左对齐，在输出内容后面添加空格，可以在占位符的<code>%</code>的后面插入一个<code>-</code>号。</p>
+<pre><code class="language-c">printf(&quot;%-5d\n&quot;, 123); // 输出为 &quot;123  &quot;  
+</code></pre>
+<p>上面示例中，输出内容<code>123</code>的后面添加了空格。</p>
+<p>对于小数，这个限定符会限制所有数字的最小显示宽度。</p>
+<pre><code class="language-c">// 输出 &quot;  123.450000&quot;  
+printf(&quot;%12f\n&quot;, 123.45);  
+</code></pre>
+<p>上面示例中，<code>%12f</code>表示输出的浮点数最少要占据12位。由于小数的默认显示精度是小数点后6位，所以<code>123.45</code>输出结果的头部会添加2个空格。</p>
+<ol>
+<li>总是显示正负号</li>
+</ol>
+<p>默认情况下，<code>printf()</code>不对正数显示<code>+</code>号，只对负数显示<code>-</code>号。如果想让正数也输出<code>+</code>号，可以在占位符的<code>%</code>后面加一个<code>+</code>。</p>
+<pre><code class="language-c">printf(&quot;%+d\n&quot;, 12); // 输出 +12  
+printf(&quot;%+d\n&quot;, -12); // 输出 -12  
+</code></pre>
+<p>上面示例中，<code>%+d</code>可以确保输出的数值，总是带有正负号。</p>
+<ol>
+<li>限定小数位数</li>
+</ol>
+<p>输出小数时，有时希望限定小数的位数。举例来说，希望小数点后面只保留两位，占位符可以写成<code>%.2f</code>。</p>
+<pre><code class="language-c">// 输出 Number is 0.50  
+printf(&quot;Number is %.2f\n&quot;, 0.5);  
+</code></pre>
+<p>上面示例中，如果希望小数点后面输出3位（<code>0.500</code>），占位符就要写成<code>%.3f</code>。</p>
+<p>这种写法可以与限定宽度占位符，结合使用。</p>
+<pre><code class="language-c">// 输出为 &quot;  0.50&quot;  
+printf(&quot;%6.2f\n&quot;, 0.5);  
+</code></pre>
+<p>上面示例中，<code>%6.2f</code>表示输出字符串最小宽度为6，小数位数为2。所以，输出字符串的头部有两个空格。</p>
+<p>最小宽度和小数位数这两个限定值，都可以用<code>*</code>代替，通过<code>printf()</code>的参数传入。</p>
+<pre><code class="language-c">printf(&quot;%*.*f\n&quot;, 6, 2, 0.5);  
+// 等同于  
+printf(&quot;%6.2f\n&quot;, 0.5);  
+</code></pre>
+<p>上面示例中，<code>%*.*f</code>的两个星号通过<code>printf()</code>的两个参数<code>6</code>和<code>2</code>传入。</p>
+<ol>
+<li>输出部分字符串</li>
+</ol>
+<p><code>%s</code>占位符用来输出字符串，默认是全部输出。如果只想输出开头的部分，可以用<code>%.[m]s</code>指定输出的长度，其中<code>[m]</code>代表一个数字，表示所要输出的长度。</p>
+<pre><code class="language-c">// 输出 hello  
+printf(&quot;%.5s\n&quot;, &quot;hello world&quot;);  
+</code></pre>
+<p>上面示例中，占位符<code>%.5s</code>表示只输出字符串“hello world”的前5个字符，即“hello”。</p>
+<h2 id="scanf"><code>scanf()</code></h2>
+<p>是读取用的函数。和<code>printf()</code>一样，它也需要用到占位符来确定参数个数。</p>
+<h3 id="_4">用法</h3>
+<pre><code class="language-c">int a,c[2];
+char b[32];
+
+scanf(&quot;%d %s %d&quot;, &amp;a, b, &amp;c[1]);
+</code></pre>
+<p>上面的语句读入一个整数和一个不含空格的一个连续字符串以及另一个整数。至于地址引用符号<code>&amp;</code>的使用，先记住上面的例子，后面再看。</p>
+<p>用占位符<code>%c %f %lf</code>可以读取字符、浮点数、双精度浮点数。</p>
+<pre><code class="language-c">//读取输入 114.514+1.919810 
+scanf(&quot;%f %c %lf&quot;, &amp;a, &amp;b, &amp;c);
+</code></pre>
+<h2 id="gets"><code>gets()</code></h2>
+<p>按行读取函数。</p>
+<h3 id="_5">用法</h3>
+<pre><code class="language-c">char str[128];
+gets(str);
+</code></pre>
+<p>上面的代码会读取一阵行的内容，也就是会读取到<code>\n</code>为止，并将上面的内容全部存入<code>str</code>中。</p>
+<h3 id="_6">其他</h3>
+<p>这是一个本应该弃用的函数。因为它读取内容不检查内存大小，会把数据存到程序数据段以外的区域，破坏程序和系统。这是常见的<strong>溢出漏洞</strong>。</p>
+<p>现在常用<code>gets_s()</code>替代。</p>
+<h2 id="getchar"><code>getchar()</code></h2>
+<p>读取单个字符。</p>
+<h3 id="_7">用法</h3>
+<pre><code class="language-c">char ch;
+ch = getchar();
+</code></pre>
+<p><code>getchar()</code>会读取一个字符并返回。我们可以用<code>char</code>类型的变量接收。不过注意，有时它会读取到超过<code>char</code>范围的值，比如<code>EOF</code>，文件终止符。通过这一点，我们可以读取并判断是否读取到文件末尾：</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+...
+    while((ch = getchar()) != EOF){
+        ...
+    }
+    ...
+</code></pre>
+<h2 id="puts"><code>puts()</code></h2>
+<p>输出字符串。</p>
+<h2 id="_8">用法</h2>
+<pre><code class="language-c">//输出 Hello, world\n
+char str[]=&quot;Hello, world&quot;
+puts(str);
+</code></pre>
+<h2 id="putchar"><code>putchar()</code></h2>
+<p>输出单个字符。</p>
+<h3 id="_9">用法</h3>
+<pre><code class="language-c">//输出 A ，因为A的ASCII码是65
+char ch=65;
+putchar(ch);
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b78d2936.min.js"></script>
+      
+    
+  </body>
+</html>
